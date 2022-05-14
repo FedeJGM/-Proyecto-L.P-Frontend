@@ -12,7 +12,7 @@ const OlvidePassword = () => {
         e.preventDefault()
 
         if(email === '' || email.length < 6) {
-            setAlerta({msg: 'El Email es obligatorio', error: true})
+            setAlerta({msg: 'El correo es obligatorio', error: true})
             return
         }
 
@@ -50,7 +50,7 @@ const OlvidePassword = () => {
                         <label
                             className="uppercase text-gray-600 block text-xl font-bold"
                         >
-                            Email
+                            Correo
                         </label>
                         <input 
                             type="email"

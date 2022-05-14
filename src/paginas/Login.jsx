@@ -44,8 +44,8 @@ const Login = () => {
         <>
                 <div>
                     <h1 className="text-indigo-600 font-black text-6xl">
-                        Inicia Sesión y Administra tus  {""} 
-                        <span className="text-black"> Pacientes</span>
+                        Inicia Sesión y Administra tus {""} 
+                        <span className="text-black">Pacientes</span>
                     </h1>
                 </div>
 
@@ -64,7 +64,7 @@ const Login = () => {
                             </label>
                             <input 
                                 type="email"
-                                placeholder="Email de Registro"
+                                placeholder="Correo de Registro"
                                 className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
@@ -78,7 +78,7 @@ const Login = () => {
                             </label>
                             <input 
                                 type="password"
-                                placeholder="Su Contraseña"
+                                placeholder="Su contraseña"
                                 className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}

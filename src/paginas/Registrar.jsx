@@ -25,7 +25,7 @@ const Registrar = () => {
         }
 
         if(password.length < 6) {
-            setAlerta({ msg: 'La contrasela es muy corta, agrega minimo 6 caracteres', error: true })
+            setAlerta({ msg: 'La contraseña es muy corta, agrega minimo 6 caracteres', error: true })
             return
         }
 
@@ -35,7 +35,7 @@ const Registrar = () => {
         try {
             await clienteAxios.post('/veterinarios', { nombre, email, password })
             setAlerta({
-                msg: 'Creado Correctamente, revisa tu correo',
+                msg: 'Creado correctamente, revisa tu correo',
                 error: false
             })
         } catch (error) {
@@ -53,7 +53,7 @@ const Registrar = () => {
         <>
             <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Crea tu Cuenta y Administra tus{""} 
+                    Crea tu Cuenta y Administra tus {""} 
                     <span className="text-black">Pacientes</span>
                 </h1>
             </div>
@@ -74,7 +74,7 @@ const Registrar = () => {
                         </label>
                         <input 
                             type="text"
-                            placeholder="Tu Nombre"
+                            placeholder="Su nombre"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={nombre}
                             onChange={ e => setNombre(e.target.value)}
@@ -89,7 +89,7 @@ const Registrar = () => {
                         </label>
                         <input 
                             type="email"
-                            placeholder="Email de Registro"
+                            placeholder="Correo de Registro"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={email}
                             onChange={ e => setEmail(e.target.value)}
