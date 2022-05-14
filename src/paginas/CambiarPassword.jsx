@@ -25,7 +25,7 @@ const CambiarPassword = () => {
 
         if( password.pwd_nuevo.length < 6 ) {
             setAlerta({
-                msg: 'El Password debe tener mínimo 6 caracteres',
+                msg: 'La contraseña debe tener mínimo 6 caracteres',
                 error: true
             })
             return
@@ -42,9 +42,9 @@ const CambiarPassword = () => {
       <>
             <AdminNav />
 
-            <h2 className="font-black text-3xl text-center mt-10">Cambiar Password</h2>
+            <h2 className="font-black text-3xl text-center mt-10">Cambiar Contraseña</h2>
             <p className="text-xl mt-5 mb-10 text-center">Modifica tu {''} 
-                <span className="text-indigo-600 font-bold">Password aquí</span> 
+                <span className="text-indigo-600 font-bold">Contraseña aquí</span> 
             </p>
 
             <div className="flex justify-center">
@@ -56,12 +56,12 @@ const CambiarPassword = () => {
                         onSubmit={handleSubmit}
                     >  
                         <div className="my-3">
-                            <label className="uppercase font-bold text-gray-600">Password Actual</label>
+                            <label className="uppercase font-bold text-gray-600">Contraseña Actual</label>
                             <input
                                 type="password"
                                 className="border bg-gray-50 w-full p-2 mt-5 rounded-lg"
                                 name="pwd_actual"
-                                placeholder='Escribe tu password actual'
+                                placeholder='Escribe tu contraseña actual'
                                 onChange={e => setPassword({
                                     ...password,
                                     [e.target.name] : e.target.value
@@ -70,12 +70,12 @@ const CambiarPassword = () => {
                         </div>
 
                         <div className="my-3">
-                            <label className="uppercase font-bold text-gray-600">Password Nuevo</label>
+                            <label className="uppercase font-bold text-gray-600">Contraseña Nueva</label>
                             <input
                                 type="password"
                                 className="border bg-gray-50 w-full p-2 mt-5 rounded-lg"
                                 name="pwd_nuevo"
-                                placeholder='Escribe tu nuevo password'
+                                placeholder='Escribe tu nueva contraseña'
                                 onChange={e => setPassword({
                                     ...password,
                                     [e.target.name] : e.target.value
@@ -85,7 +85,7 @@ const CambiarPassword = () => {
 
                         <input 
                             type="submit"
-                            value="Actualizar Password"
+                            value="Actualizar Contraseña"
                             className="bg-indigo-700 px-10 py-3 font-bold text-white rounded-lg uppercase w-full mt-5"
                         />
                     </form>

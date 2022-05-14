@@ -33,8 +33,8 @@ const OlvidePassword = () => {
       <>
             <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Recupera tu Acceso y no Pierdas {""} 
-                    <span className="text-black">tus Pacientes</span>
+                    Recupera tu Acceso y no Pierdas tus {""} 
+                    <span className="text-black">Pacientes</span>
                 </h1>
             </div>
 
@@ -54,7 +54,7 @@ const OlvidePassword = () => {
                         </label>
                         <input 
                             type="email"
-                            placeholder="Email de Registro"
+                            placeholder="Correo de Registro"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={email}
                             onChange={e => setEmail(e.target.value)}

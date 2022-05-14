@@ -35,7 +35,7 @@ const NuevoPassword = () => {
 
     if(password.length < 6) {
       setAlerta({
-        msg: 'El Password debe ser mínimo de 6 caracteres',
+        msg: 'La constraseña debe ser mínimo de 6 caracteres',
         error: true
       })
       return
@@ -62,8 +62,8 @@ const NuevoPassword = () => {
       <>
             <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Reestablece tu password y no Pierdas Acceso a {""} 
-                    <span className="text-black">tus Pacientes</span>
+                    Reestablece tu contraseña y no Pierdas Acceso a tus {""} 
+                    <span className="text-black">Pacientes</span>
                 </h1>
             </div>
 
@@ -79,11 +79,11 @@ const NuevoPassword = () => {
                               <label
                                   className="uppercase text-gray-600 block text-xl font-bold"
                               >
-                                  Nuevo Password
+                                  Nuevo Contraseña
                               </label>
                               <input 
                                   type="password"
-                                  placeholder="Tu Nuevo Password"
+                                  placeholder="Su nueva contraseña"
                                   className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                                   value={password}
                                   onChange={ e => setPassword(e.target.value)}
@@ -91,7 +91,7 @@ const NuevoPassword = () => {
                         </div>
                         <input 
                             type="submit"
-                            value="Guardar Nuevo Password"
+                            value="Guardar nueva contraseña"
                             className="bg-indigo-700 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-indigo-800 md:w-auto "
                         />
                       </form>

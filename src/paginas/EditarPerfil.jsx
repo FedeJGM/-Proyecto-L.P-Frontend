@@ -19,7 +19,7 @@ const EditarPerfil = () => {
         const { nombre, email } = perfil
         if([nombre, email].includes('')) {
             setAlerta({
-                msg: 'Email y Nombre son obligatorios',
+                msg: 'Correo y Nombre son obligatorios',
                 error: true
             })
             return
@@ -91,7 +91,7 @@ const EditarPerfil = () => {
                         </div>
 
                         <div className="my-3">
-                            <label className="uppercase font-bold text-gray-600">Email</label>
+                            <label className="uppercase font-bold text-gray-600">Correo</label>
                             <input
                                 type="text"
                                 className="border bg-gray-50 w-full p-2 mt-5 rounded-lg"

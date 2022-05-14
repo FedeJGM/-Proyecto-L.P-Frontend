@@ -20,12 +20,12 @@ const Registrar = () => {
         }
 
         if(password !== repetirPassword) {
-            setAlerta({ msg: 'Los Password no son iguales', error: true })
+            setAlerta({ msg: 'Las contraseñas no son iguales', error: true })
             return
         }
 
         if(password.length < 6) {
-            setAlerta({ msg: 'El Password es muy corto, agrega minimo 6 caracteres', error: true })
+            setAlerta({ msg: 'La contrasela es muy corta, agrega minimo 6 caracteres', error: true })
             return
         }
 
@@ -35,7 +35,7 @@ const Registrar = () => {
         try {
             await clienteAxios.post('/veterinarios', { nombre, email, password })
             setAlerta({
-                msg: 'Creado Correctamente, revisa tu email',
+                msg: 'Creado Correctamente, revisa tu correo',
                 error: false
             })
         } catch (error) {
@@ -53,8 +53,8 @@ const Registrar = () => {
         <>
             <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Crea tu Cuenta y Administra {""} 
-                    <span className="text-black">tus Pacientes</span>
+                    Crea tu Cuenta y Administra tus{""} 
+                    <span className="text-black">Pacientes</span>
                 </h1>
             </div>
 
@@ -85,7 +85,7 @@ const Registrar = () => {
                         <label
                             className="uppercase text-gray-600 block text-xl font-bold"
                         >
-                            Email
+                            Correo
                         </label>
                         <input 
                             type="email"
@@ -100,11 +100,11 @@ const Registrar = () => {
                         <label
                             className="uppercase text-gray-600 block text-xl font-bold"
                         >
-                            Password
+                            Contraseña
                         </label>
                         <input 
                             type="password"
-                            placeholder="Tu Password"
+                            placeholder="Su contraseña"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={password}
                             onChange={ e => setPassword(e.target.value)}
@@ -115,11 +115,11 @@ const Registrar = () => {
                         <label
                             className="uppercase text-gray-600 block text-xl font-bold"
                         >
-                            Repetir Password
+                            Repetir Contraseña
                         </label>
                         <input 
                             type="password"
-                            placeholder="Repite tu Password"
+                            placeholder="Repite su contraseña"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={repetirPassword}
                             onChange={ e => setRepetirPassword(e.target.value)}

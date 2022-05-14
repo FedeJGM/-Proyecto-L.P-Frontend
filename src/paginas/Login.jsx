@@ -60,7 +60,7 @@ const Login = () => {
                             <label
                                 className="uppercase text-gray-600 block text-xl font-bold"
                             >
-                                Email
+                                Correo
                             </label>
                             <input 
                                 type="email"
@@ -74,11 +74,11 @@ const Login = () => {
                             <label
                                 className="uppercase text-gray-600 block text-xl font-bold"
                             >
-                                Password
+                                Contraseña
                             </label>
                             <input 
                                 type="password"
-                                placeholder="Tu Password"
+                                placeholder="Su Contraseña"
                                 className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
@@ -99,7 +99,7 @@ const Login = () => {
                             to="/registrar">¿No tienes una cuenta? Regístrate</Link >
                         <Link 
                             className='block text-center my-5 text-gray-500'
-                            to="/olvide-password">Olvide mi Password</Link >
+                            to="/olvide-password">Olvide mi Contraseña</Link >
                     </nav>
                 </div>
 

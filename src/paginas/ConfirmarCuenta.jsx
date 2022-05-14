@@ -36,8 +36,8 @@ const ConfirmarCuenta = () => {
         <>
           <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Confirma tu Cuenta y Comienza a Administrar  {""} 
-                    <span className="text-black">tus Pacientes</span>
+                    Confirma tu Cuenta y Comienza a Administrar tus {""} 
+                    <span className="text-black">Pacientes</span>
                 </h1>
             </div>
 
