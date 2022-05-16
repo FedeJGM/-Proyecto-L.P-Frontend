@@ -7,9 +7,10 @@ const Registrar = () => {
     const [ nombre, setNombre ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
-    const [ repetirPassword, setRepetirPassword ] = useState('')
+    const [ repetirPassword, setRepetirPassword] = useState('')
+ 
 
-    const [alerta, setAlerta] = useState({})
+    const [ alerta, setAlerta] = useState({})
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -45,6 +46,11 @@ const Registrar = () => {
             })
         }
 
+        setNombre('')
+        setEmail('')
+        setPassword('')
+        setRepetirPassword('')
+
     }
 
     const { msg } = alerta
@@ -77,7 +83,8 @@ const Registrar = () => {
                             placeholder="Su nombre"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={nombre}
-                            onChange={ e => setNombre(e.target.value)}
+                            pattern="([ñÑ aA-zZ])+[^0-9]"
+                            onChange={e => setNombre(e.target.value)}
                         />
                     </div>
 
@@ -122,10 +129,9 @@ const Registrar = () => {
                             placeholder="Repite su contraseña"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={repetirPassword}
-                            onChange={ e => setRepetirPassword(e.target.value)}
+                            onChange={e => setRepetirPassword(e.target.value)}
                         />
                     </div>
-
 
                     <input 
                         type="submit"
