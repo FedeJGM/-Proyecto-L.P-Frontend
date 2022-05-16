@@ -83,7 +83,7 @@ const Registrar = () => {
                             placeholder="Su nombre"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                             value={nombre}
-                            pattern="([ñÑ aA-zZ])+[^0-9]"
+                            pattern="([ñÑíÍóÓáÁéÉúÚ aA-zZ])+[^0-9]"
                             onChange={e => setNombre(e.target.value)}
                         />
                     </div>
