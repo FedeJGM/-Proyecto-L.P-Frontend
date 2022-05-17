@@ -15,6 +15,7 @@ const Registrar = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
+        // Validación del formulario - .includes string vacio
         if([nombre, email, password, repetirPassword].includes('')) {
             setAlerta({ msg: 'Hay campos vacios', error: true })
             return;
@@ -26,7 +27,7 @@ const Registrar = () => {
         }
 
         if(password.length < 6) {
-            setAlerta({ msg: 'La contraseña es muy corta, agrega minimo 6 caracteres', error: true })
+            setAlerta({ msg: 'La contraseña es muy corta, agrega mínimo 6 caracteres', error: true })
             return
         }
 
