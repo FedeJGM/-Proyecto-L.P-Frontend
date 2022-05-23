@@ -6,7 +6,8 @@ const AuthProvider = ({children}) => {
 
     const [cargando, setCargando] = useState(true)
     const [ auth, setAuth ] = useState({})
-
+    
+    // código revisa el token una vez inicies sesión - caso tal devuelve null
     useEffect(() => {
         const autenticarUsuario = async () => {
             const token = localStorage.getItem('token')
@@ -14,7 +15,8 @@ const AuthProvider = ({children}) => {
                 setCargando(false)
                 return
             }
-
+         
+            // código de axios para acceder al token
             const config = {
                 headers: {
                     "Content-Type": "application/json", 

@@ -5,6 +5,7 @@ import useAuth from '../hooks/useAuth';
 
 
 const RutaProtegida = () => {
+    // de esta manera traemos todo la información del context
     const { auth, cargando } = useAuth()
     if(cargando) return 'cargando...'
 

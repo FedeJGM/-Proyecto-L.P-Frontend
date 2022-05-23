@@ -79,7 +79,7 @@ const NuevoPassword = () => {
                               <label
                                   className="uppercase text-gray-600 block text-xl font-bold"
                               >
-                                  Nuevo Contraseña
+                                  Nueva Contraseña
                               </label>
                               <input 
                                   type="password"
